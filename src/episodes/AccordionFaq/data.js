@@ -8,7 +8,7 @@ export const data = [
         for up to 2km whilst searching for food each day.`
     },
     {
-        title: 'Where the hedgehog tuptups at night',
+        title: 'Where to the hedgehog tuptups at night',
         content: `Habitat. Hedgehogs can be found in Europe, Asia, 
         Africa and New Zealand, according to National Geographic. 
         They can live in a wide range of habitats, including savannas, 
