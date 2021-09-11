@@ -61,6 +61,9 @@ const Navigation = () => {
                 <NavListItem>
                     <StyledNavLink to="/infinite-scroll">Infinite Scroll</StyledNavLink>
                 </NavListItem>
+                <NavListItem>
+                    <StyledNavLink to="/accordion-faq">Accordion FAQ</StyledNavLink>
+                </NavListItem>
             </NavList>
         </Nav>
     )

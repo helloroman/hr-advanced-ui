@@ -8,6 +8,7 @@ import Navigation from "components/Navigation/Navigation";
 import Welcome from "./components/Welcome/Welcome";
 import {GlobalStyle} from "./assets/styles/GlobalStyles";
 import InfiniteScroll from "./episodes/InfiniteLoading/InfiniteScroll";
+import AccordionFaq from "./episodes/AccordionFaq/AccordionFaq";
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
         <Switch>
           <Route path="/infinite-scroll">
             <InfiniteScroll />
+          </Route>
+          <Route path="/accordion-faq">
+            <AccordionFaq />
           </Route>
           <Route path="/">
             <Welcome />
