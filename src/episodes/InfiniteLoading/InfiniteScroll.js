@@ -1,24 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
+import data from './beers.json';
+import * as paginate from 'paginatejson';
 
-const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-gap: 50px;
-  min-height: 110vh;
-`;
+const fetchBeers = (page = 1) => {
+    const {items, ...pageInfo} = paginate.paginate(data, page, 6);
+    return new Promise(resolve => setTimeout(() => resolve({items, page: pageInfo}), 2500));
+}
 
 const InfiniteScroll = () => {
     return (
         <>
-            <Wrapper>
-                <div>
-                    <p>lorem</p>
-                    <p>lorem</p>
-                    <p>lorem</p>
-                </div>
-            </Wrapper>
+            <div>
+                <h2>Infinite scroll 🎉</h2>
+            </div>
         </>
     )
 };

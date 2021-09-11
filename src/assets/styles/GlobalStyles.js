@@ -5,6 +5,11 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
   *, *::after, *::before {
     box-sizing: inherit;
     font-family: 'IBM Plex Mono', monospace;

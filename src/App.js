@@ -11,22 +11,20 @@ import InfiniteScroll from "./episodes/InfiniteLoading/InfiniteScroll";
 
 const App = () => {
   return (
-    <div>
+    <>
       <GlobalStyle />
       <Router>
-        <div>
-          <Navigation />
-          <Switch>
-            <Route path="/infinite-scroll">
-              <InfiniteScroll />
-            </Route>
-            <Route path="/">
-              <Welcome />
-            </Route>
-          </Switch>
-        </div>
+        <Navigation />
+        <Switch>
+          <Route path="/infinite-scroll">
+            <InfiniteScroll />
+          </Route>
+          <Route path="/">
+            <Welcome />
+          </Route>
+        </Switch>
       </Router>
-    </div>
+    </>
   );
 }
 
