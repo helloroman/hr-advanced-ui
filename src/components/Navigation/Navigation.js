@@ -64,6 +64,9 @@ const Navigation = () => {
                 <NavListItem>
                     <StyledNavLink to="/accordion-faq">Accordion FAQ</StyledNavLink>
                 </NavListItem>
+                <NavListItem>
+                    <StyledNavLink to="/sidebar">Sidebar</StyledNavLink>
+                </NavListItem>
             </NavList>
         </Nav>
     )

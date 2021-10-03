@@ -9,6 +9,7 @@ import Welcome from "./components/Welcome/Welcome";
 import {GlobalStyle} from "./assets/styles/GlobalStyles";
 import InfiniteScroll from "./episodes/InfiniteLoading/InfiniteScroll";
 import AccordionFaq from "./episodes/AccordionFaq/AccordionFaq";
+import Sidebar from "./episodes/Sidebar/Sidebar";
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
           </Route>
           <Route path="/accordion-faq">
             <AccordionFaq />
+          </Route>
+          <Route path="/sidebar">
+            <Sidebar />
           </Route>
           <Route path="/">
             <Welcome />
