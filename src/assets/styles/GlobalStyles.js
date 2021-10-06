@@ -6,7 +6,10 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
+    padding: 0;
+    margin: 0;
     max-width: 100%;
+    width: 100%;
     overflow-x: hidden;
   }
   

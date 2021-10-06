@@ -12,8 +12,8 @@ const Nav = styled.nav`
   position: absolute;
   right: 0;
   top: 50px;
-  transform: translateX(${({isOpen}) => isOpen ? '0' : '100%'});
   transition: transform 0.5s ease-in-out;
+  transform: translateX(${({isOpen}) => isOpen ? '0' : '100%'});
 `;
 
 const NavList = styled.ul`
