@@ -26,9 +26,10 @@ const NavListItem = styled.li`
 `;
 
 const activeClassName = 'selected';
-const StyledNavLink = styled(NavLink).attrs({
+const StyledNavLink = styled(NavLink).attrs(props => ({
+    tabIndex: props.isOpen ? null : '-1',
     activeClassName,
-})`
+}))`
   font-family: 'IBM Plex Mono', monospace;
   text-decoration: none;
   color: black;
@@ -56,16 +57,16 @@ const Navigation = () => {
             <NavButton onClick={() => setIsOpen(!isOpen)}>🍔</NavButton>
             <NavList>
                 <NavListItem>
-                    <StyledNavLink exact to="/">Home</StyledNavLink>
+                    <StyledNavLink isOpen={isOpen} exact to="/">Home</StyledNavLink>
                 </NavListItem>
                 <NavListItem>
-                    <StyledNavLink to="/infinite-scroll">Infinite Scroll</StyledNavLink>
+                    <StyledNavLink isOpen={isOpen} to="/infinite-scroll">Infinite Scroll</StyledNavLink>
                 </NavListItem>
                 <NavListItem>
-                    <StyledNavLink to="/accordion-faq">Accordion FAQ</StyledNavLink>
+                    <StyledNavLink isOpen={isOpen} to="/accordion-faq">Accordion FAQ</StyledNavLink>
                 </NavListItem>
                 <NavListItem>
-                    <StyledNavLink to="/sidebar">Sidebar</StyledNavLink>
+                    <StyledNavLink isOpen={isOpen} to="/sidebar">Sidebar</StyledNavLink>
                 </NavListItem>
             </NavList>
         </Nav>
