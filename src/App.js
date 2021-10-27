@@ -10,6 +10,7 @@ import {GlobalStyle} from "./assets/styles/GlobalStyles";
 import InfiniteScroll from "./episodes/InfiniteLoading/InfiniteScroll";
 import AccordionFaq from "./episodes/AccordionFaq/AccordionFaq";
 import Sidebar from "./episodes/Sidebar/Sidebar";
+import Combobox from "./episodes/Combobox/Combobox";
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
       <Router>
         <Navigation />
         <Switch>
+          <Route path="/combobox">
+            <Combobox />
+          </Route>
           <Route path="/infinite-scroll">
             <InfiniteScroll />
           </Route>
