@@ -3,6 +3,7 @@ import {NavLink} from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
+  z-index: 10000;
   width: 235px;
   display: flex;
   flex-direction: column;

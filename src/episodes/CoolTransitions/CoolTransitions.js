@@ -8,6 +8,7 @@ import Demo4 from "./Demo4";
 import styled from 'styled-components';
 
 const Navigation = styled.div`
+  z-index: 1000;
   position: absolute;
   bottom: 20px;
   right: 40px;
