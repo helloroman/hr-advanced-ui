@@ -65,7 +65,7 @@ const ButtonA = styled(StyledButton)`
   }
 `;
 
-const ButtonB = styled(StyledButton)`
+export const ButtonB = styled(StyledButton)`
   border: 3px solid black;
   position: relative;
   overflow: hidden;
