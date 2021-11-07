@@ -12,6 +12,7 @@ import AccordionFaq from "./episodes/AccordionFaq/AccordionFaq";
 import Sidebar from "./episodes/Sidebar/Sidebar";
 import Combobox from "./episodes/Combobox/Combobox";
 import FancyButtons from "./episodes/FancyButtons/FancyButtons";
+import CoolTransitions from "./episodes/CoolTransitions/CoolTransitions";
 
 const App = () => {
   return (
@@ -20,6 +21,9 @@ const App = () => {
       <Router>
         <Navigation />
         <Switch>
+          <Route path="/cool-transitions">
+            <CoolTransitions />
+          </Route>
           <Route path="/fancy-buttons">
             <FancyButtons />
           </Route>
