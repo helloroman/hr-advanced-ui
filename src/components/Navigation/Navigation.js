@@ -81,6 +81,9 @@ const Navigation = () => {
                 <NavListItem>
                     <StyledNavLink isOpen={isOpen} to="/animated-svg">Animated Svg</StyledNavLink>
                 </NavListItem>
+                <NavListItem>
+                    <StyledNavLink isOpen={isOpen} to="/scroll-animations">Scroll Animations</StyledNavLink>
+                </NavListItem>
             </NavList>
         </Nav>
     )

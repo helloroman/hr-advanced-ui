@@ -14,6 +14,7 @@ import Combobox from "./episodes/Combobox/Combobox";
 import FancyButtons from "./episodes/FancyButtons/FancyButtons";
 import CoolTransitions from "./episodes/CoolTransitions/CoolTransitions";
 import AnimatedSvg from "./episodes/AnimatedSvg/AnimatedSvg";
+import ScrollAnimations from "./episodes/ScrollAnimations/ScrollAnimations";
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
       <Router>
         <Navigation />
         <Switch>
+          <Route path="/scroll-animations">
+            <ScrollAnimations />
+          </Route>
           <Route path="/animated-svg">
             <AnimatedSvg />
           </Route>
