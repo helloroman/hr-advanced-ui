@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import gsap from 'gsap';
-import {ScrollTrigger} from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const imageUrl = 'https://i.picsum.photos/id/1042/3456/5184.jpg?hmac=5xr8Veg2D_kEQQO6rvGj_Yk8s_N4iq3-eZ9_KclSXNQ';
 
@@ -101,93 +98,25 @@ const CurtainImage = styled.img`
   top: -50%;
 `;
 
-
 const ScrollAnimations = () => {
-  const hero = React.useRef(null);
-  const article1 = React.useRef(null);
-  const article2 = React.useRef(null);
-  const image1 = React.useRef(null);
-  const image2 = React.useRef(null);
-  const curtain = React.useRef(null);
-  const tlHero = React.useRef(null);
-  const tlCurtain = React.useRef(null);
-
-  React.useEffect(() => {
-    tlHero.current = gsap.timeline({
-      scrollTrigger: {
-        trigger: hero.current,
-        start: 'top top',
-        scrub: 1,
-      }
-    });
-
-    tlHero.current.to(hero.current.children[0], {letterSpacing: 500, ease: 'power3', duration: 1});
-
-    gsap.fromTo(article1.current.children, {x: '-=150%', autoAlpha: 0}, {
-      x: 0, autoAlpha: 1, duration: 1, ease: 'power3', stagger: 0.1, scrollTrigger: {
-        trigger: article1.current,
-        start: 'top center',
-      }
-    });
-    gsap.fromTo(article2.current.children, {x: '+=150%', autoAlpha: 0}, {
-      x: 0, autoAlpha: 1, duration: 1, ease: 'power3', stagger: 0.1, scrollTrigger: {
-        trigger: article2.current,
-        start: 'top center',
-      }
-    });
-    gsap.fromTo(image1.current, {x: '+=150%', autoAlpha: 0}, {
-      x: 0, autoAlpha: 1, duration: 1, ease: 'power3', stagger: 0.1, scrollTrigger: {
-        trigger: image1.current,
-        start: 'top center',
-      }
-    });
-    gsap.fromTo(image2.current, {x: '-=150%', autoAlpha: 0}, {
-      x: 0, autoAlpha: 1, duration: 1, ease: 'power3', stagger: 0.1, scrollTrigger: {
-        trigger: image2.current,
-        start: 'top center',
-      }
-    });
-
-    tlCurtain.current = gsap.timeline({
-      scrollTrigger: {
-        trigger: curtain.current,
-        start: 'top center'
-      }
-    })
-
-    gsap.set(curtain.current.children[1], {autoAlpha: 0});
-
-    tlCurtain.current
-      .to(curtain.current.children[0], {width: '100%', duration: 1})
-      .to(curtain.current.children[1], {autoAlpha: 1})
-
-    gsap.to(curtain.current.children[1], {
-      rotate: 45, scrollTrigger: {
-        trigger: curtain.current,
-        start: 'top center',
-        scrub: 1,
-      }
-    })
-  }, [])
-
   return (
     <Wrapper>
-      <Hero ref={hero}>
+      <Hero>
         <h1>inspired</h1>
       </Hero>
-      <Article ref={article1}>
+      <Article>
         <h2>get inspired</h2>
         <p>Something has always existed. According to physics, there can never be true physical nothingness—though there
           can be times when existence resembles nothing, such as a vacuum (the state of minimum possible energy).</p>
       </Article>
-      <Image ref={image1}/>
-      <Image ref={image2}/>
-      <Article ref={article2}>
+      <Image/>
+      <Image/>
+      <Article>
         <h2>get inspired</h2>
         <p>Something has always existed. According to physics, there can never be true physical nothingness—though there
           can be times when existence resembles nothing, such as a vacuum (the state of minimum possible energy).</p>
       </Article>
-      <Curtain ref={curtain}>
+      <Curtain>
         <CurtainBackground/>
         <CurtainImage src={imageUrl}/>
       </Curtain>
